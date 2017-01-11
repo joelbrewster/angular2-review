@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `<h1>Hello {{name}}</h1>
   <p>Email: {{email}}</p>
   <p>Address: {{address.street}} {{address.city}} {{address.state}}</p>
-  <button (click)="toggleHobbies()">Show hobbies</button>
+  <button (click)="toggleHobbies()">{{showHobbies ? "Hide hobbies" : "Show hobbies"}}</button>
   <div *ngIf="showHobbies">
   <ul>
     <li *ngFor ="let hobby of hobbies">
