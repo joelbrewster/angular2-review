@@ -15,4 +15,7 @@ export class UserComponent  {
     city: 'Melbourne',
     state: 'VIC'
   }
+  constructor() {
+      console.log('constructor ran...');
+  }
 }
