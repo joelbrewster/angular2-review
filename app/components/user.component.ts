@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class UserComponent  { 
   name: string; 
   email: string;
-  address;
+  address: address;
   
   
   constructor() {
@@ -22,4 +22,9 @@ export class UserComponent  {
         state: 'VIC'
     }
   }  
+}
+interface address {
+    street: string;
+    city: string;
+    state: string;
 }
