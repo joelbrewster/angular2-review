@@ -5,11 +5,13 @@ import { Component } from '@angular/core';
   template: `<h1>Hello {{name}}</h1>
   <p>Email: {{email}}</p>
   <p>Address: {{address.street}} {{address.city}} {{address.state}}</p>
+  <div *ngIf="showHobbies">
   <ul>
     <li *ngFor ="let hobby of hobbies">
         {{hobby}}
     </li>
   </ul>
+  </div>
 
   `,
 })
@@ -18,6 +20,7 @@ export class UserComponent  {
   email: string;
   address: address;
   hobbies: string[];
+  showHobbies: boolean;
   
   
   constructor() {
@@ -29,6 +32,7 @@ export class UserComponent  {
         state: 'VIC'
     }
     this.hobbies  = ['music', 'movies','icecream'];
+    this.showHobbies = false;
   }  
 }
 interface address {
