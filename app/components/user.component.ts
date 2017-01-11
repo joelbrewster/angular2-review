@@ -8,14 +8,18 @@ import { Component } from '@angular/core';
   `,
 })
 export class UserComponent  { 
-  name = 'Angular'; 
-  email = 'name@email.com';
-  address = {
-    street: '123 road',
-    city: 'Melbourne',
-    state: 'VIC'
-  }
+  name: string; 
+  email: string;
+  address;
+  
+  
   constructor() {
-      console.log('constructor ran...');
-  }
+    this.name = 'Angular'; 
+    this.email = 'name@email.com';
+    this.address = {
+        street: '123 road',
+        city: 'Melbourne',
+        state: 'VIC'
+    }
+  }  
 }
