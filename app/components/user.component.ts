@@ -13,19 +13,22 @@ import { Component } from '@angular/core';
     </li>
   </ul>
   </div>
-
+  <form>
+    <label>Name: </label><br />
+    <input type="text" name="name" [(ngModel)] = "name"/>
+  </form>
   `,
 })
-export class UserComponent  { 
-  name: string; 
+export class UserComponent  {
+  name: string;
   email: string;
   address: address;
   hobbies: string[];
   showHobbies: boolean;
-  
-  
+
+
   constructor() {
-    this.name = 'Angular'; 
+    this.name = 'Angular';
     this.email = 'name@email.com';
     this.address = {
         street: '123 road',
@@ -34,7 +37,7 @@ export class UserComponent  {
     }
     this.hobbies  = ['music', 'movies','icecream'];
     this.showHobbies = false;
-  }  
+  }
 
 toggleHobbies(){
     if(this.showHobbies == true) {
